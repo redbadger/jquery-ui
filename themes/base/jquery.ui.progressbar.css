@@ -16,3 +16,6 @@
 	filter: alpha(opacity=25);
 	opacity: 0.25;
 }
+.ui-progressbar .ui-progressbar-indeterminate {
+	background-image: none;
+}

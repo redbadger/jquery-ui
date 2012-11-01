@@ -94,6 +94,7 @@ $.widget( "ui.progressbar", {
 			overlay = this.valueDiv.children().eq( 0 );
 
 		overlay.toggleClass( "ui-progressbar-overlay", isNaN( value ) );
+		this.valueDiv.toggleClass( "ui-progressbar-indeterminate", isNaN( value ) );
 
 		if ( this.oldValue !== value && ( !isNaN( this.oldValue ) || !isNaN( value ) ) ) {
 			this.oldValue = value;
