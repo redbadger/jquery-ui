@@ -20,26 +20,15 @@
 				pbarValue = pbar.find( ".ui-progressbar-value" );
 
 			if ( target.is( "#numButton" ) ) {
-				pbarValue.css( "background-color", "inherit" );
-				pbar
-					.removeClass( "ui-progressbar-animated-light ui-progressbar-animated-dark" )
-					.progressbar( "option", {
-						value: Math.floor( Math.random() * 100 )
-					});
+				console.log(pbar.css("background"));
+				pbar.progressbar( "option", {
+					value: Math.floor( Math.random() * 100 )
+				});
 			} else if ( target.is( "#colorButton" ) ) {
 				pbarValue.css({
-					"background-color": '#' + Math.floor( Math.random() * 16777215 ).toString( 16 )
+					"background": '#' + Math.floor( Math.random() * 16777215 ).toString( 16 )
 				});
-			} else {
-				if ( target.is( "#falseButtonLight" ) ) {
-					pbar
-						.addClass( "ui-progressbar-animated-light" )
-						.removeClass( "ui-progressbar-animated-dark" );
-				} else {
-					pbar
-						.addClass( "ui-progressbar-animated-dark" )
-						.removeClass( "ui-progressbar-animated-light" );
-				}
+			} else if ( target.is( "#falseButton" ) ) {
 				pbar.progressbar( "option", "value", false );
 			}
 		});
@@ -53,10 +42,9 @@
 </head>
 <body>
 
-<div id="progressbar" class="ui-progressbar-animated-light"></div>
+<div id="progressbar"></div>
 <button id="numButton">Random Value - Determinate</button>
-<button id="falseButtonLight">Indeterminate - Light</button>
-<button id="falseButtonDark">Indeterminate - Dark</button>
+<button id="falseButton">Indeterminate</button>
 <button id="colorButton">Random Color</button>
 
 <div class="demo-description">
