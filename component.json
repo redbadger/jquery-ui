@@ -1,0 +1,12 @@
+{
+  "name": "jquery-ui",
+  "version": "1.11.0pre",
+  "description": "jQuery UI",
+  "scripts": [
+    "index.js"
+  ],
+  "dependencies": {
+    "component/jquery": "*"
+  },
+  "repo": "https://raw.github.com/redbadger/jquery-ui"
+}
